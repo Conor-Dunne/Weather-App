@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body { 
+    font-family: Roboto, "Noto Sans", Arial, sans-serif;
+     background-image: url(./images/davies-designs-studio-G-6kwVnClsE-unsplash.jpg);
+    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column; 
+     min-height: 100vh; 
+    color: whitesmoke; 
+    min-width: 250px;
+} 
+
+.flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+
+#search,
+#search-btn {
+    padding: 10px;
+    font-size: 1rem; 
+}
+
+#location { 
+    font-size: 2rem;
+    background-color:#949fb5; 
+
+ }
