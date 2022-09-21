@@ -12,6 +12,7 @@ body {
     font-family: Roboto, "Noto Sans", Arial, sans-serif;
      background-image: url(./images/davies-designs-studio-G-6kwVnClsE-unsplash.jpg);
     background-repeat: no-repeat; 
+    background-size: cover;
     display: flex;
     flex-direction: column; 
      min-height: 100vh; 
@@ -25,11 +26,22 @@ body {
     align-items: center;
 }
 
+.flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0 20px 0;
+}
+
+.main {
+    gap: 10px;
+    padding-bottom: 10px;
 }
 
 
@@ -42,5 +54,20 @@ header {
 #location { 
     font-size: 2rem;
     background-color:#949fb5; 
+    margin-bottom: 15px;
+ }
 
+ .card {
+    font-size: 1.5rem;
+    width: 80%;
+    gap: 3px;
+    background: #f0f8ff66;
+    color: #665f5f;
+    width: auto;
+    padding: 15px;
+    border-radius: 5px;
+ }
+
+ .temps {
+    white-space: nowrap;
  }
