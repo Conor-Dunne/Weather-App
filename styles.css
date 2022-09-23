@@ -17,7 +17,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   color: whitesmoke;
-  min-width: 250px;
+  min-width: 330px;
+  gap: 30px;
 }
 
 .flex-col-center {
@@ -76,21 +77,51 @@ header {
 #location {
   font-size: 2rem;
   background-color: #949fb5;
-  margin-bottom: 15px;
 }
 
 .card {
-  font-size: 1.5rem;
+  font-size: 2rem;
   width: 80%;
-  gap: 3px;
+  gap: 30px;
   background: #f0f8ff36;
   color: #665f5f;
   width: auto;
   padding: 15px;
   border-radius: 5px;
   box-shadow: inset 0px -3px 7px 0px #949fb5;
+  flex-wrap: wrap-reverse;
+
 }
 
-.temps {
+#clock {
+    font-size: 4rem;
+    text-shadow: 2px 3px 9px #787878;
+
+}
+
+.temp {
   white-space: nowrap;
+  color: white;
+  text-shadow: 2px 3px 9px #787878;
+}
+
+.tempXL {
+    font-size: 10rem;
+}
+
+#temp-unit {
+    position: relative;
+    top: -55px;
+    left: -7px;
+}
+
+.text {
+    line-height: 2;
+    color: white;
+    text-shadow: 2px 3px 9px #787878;
+  
+}
+
+#icon {
+    width: 50px;
 }

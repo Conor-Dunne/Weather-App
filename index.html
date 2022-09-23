@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,10 @@
     <link rel="stylesheet" href="./styles.css">
     <script src="https://kit.fontawesome.com/d9f592773a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
-        <form action="#" id="search-bar"> 
+        <form action="#" id="search-bar">
             <input type="search" name="search" id="search" placeholder="Search your area...">
             <button type="submit" id="search-btn">
                 <i class="fa fa-search"></i>
@@ -19,74 +21,34 @@
 
     </header>
     <div id="location" class="flex-col-center">
-        <h1>
+        <h1 id="city">
             Yokohama
         </h1>
-    </div> 
+    </div>
+    <div id="clock" class="flex-row-center">
+        13:22:15
+    </div>
     <div class="main flex-col-center">
         <div class="card flex-row-center">
             <div class="text">
                 <h2 class="date">Today</h2>
-                <p>Clear in the morning but cloudy in the evening</p>
+                <p id="desc"></p>
             </div>
-            <img src="./images/animated/day.svg" class="weather-svg">
-            <div class="temps">
-                <p class="high-temp">24 &deg</p>
-                <p class="low-temp">18 &deg</p>
+            <div class="temp">
+                <p ><span id="currTemp" class="tempXL"></span><span id="temp-unit">&degC</span></p>
             </div>
+            <img src="" class="weather-svg" id="icon">
+
         </div>
-        <div class="card flex-row-center">
-            <div class="text">
-                <h2 class="date">Today</h2>
-                <p>Clear in the morning but cloudy in the evening</p>
-            </div>
-            <img src="./images/animated/day.svg" class="weather-svg">
-            <div class="temps">
-                <p class="high-temp">24 &deg</p>
-                <p class="low-temp">18 &deg</p>
-            </div>
-        </div>
-        <div class="card flex-row-center">
-            <div class="text">
-                <h2 class="date">Today</h2>
-                <p>Clear in the morning but cloudy in the evening</p>
-            </div>
-            <img src="./images/animated/day.svg" class="weather-svg">
-            <div class="temps">
-                <p class="high-temp">24 &deg</p>
-                <p class="low-temp">18 &deg</p>
-            </div>
-        </div>
-        <div class="card flex-row-center">
-            <div class="text">
-                <h2 class="date">Today</h2>
-                <p>Clear in the morning but cloudy in the evening</p>
-            </div>
-            <img src="./images/animated/day.svg" class="weather-svg">
-            <div class="temps">
-                <p class="high-temp">24 &deg</p>
-                <p class="low-temp">18 &deg</p>
-            </div>
-        </div>
-        <div class="card flex-row-center">
-            <div class="text">
-                <h2 class="date">Today</h2>
-                <p>Clear in the morning but cloudy in the evening</p>
-            </div>
-            <img src="./images/animated/day.svg" class="weather-svg">
-            <div class="temps">
-                <p class="high-temp">24 &deg</p>
-                <p class="low-temp">18 &deg</p>
-            </div>
-        </div>
+
+    </div>
 
 
 
 
-        
     </div>
 
 </body>
-</html>
+<script src="./script.js"></script>
 
-  
+</html>
