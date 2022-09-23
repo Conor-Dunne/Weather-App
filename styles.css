@@ -71,7 +71,7 @@ header {
 }
 
 #search-btn:hover {
-    background: #0b7dda; 
+  background: #0b7dda;
 }
 
 #location {
@@ -90,13 +90,11 @@ header {
   border-radius: 5px;
   box-shadow: inset 0px -3px 7px 0px #949fb5;
   flex-wrap: wrap-reverse;
-
 }
 
 #clock {
-    font-size: 4rem;
-    text-shadow: 2px 3px 9px #787878;
-
+  font-size: 4rem;
+  text-shadow: 2px 3px 9px #787878;
 }
 
 .temp {
@@ -106,22 +104,21 @@ header {
 }
 
 .tempXL {
-    font-size: 10rem;
+  font-size: 10rem;
 }
 
 #temp-unit {
-    position: relative;
-    top: -55px;
-    left: -7px;
+  position: relative;
+  top: -55px;
+  left: -7px;
 }
 
 .text {
-    line-height: 2;
-    color: white;
-    text-shadow: 2px 3px 9px #787878;
-  
+  line-height: 2;
+  color: white;
+  text-shadow: 2px 3px 9px #787878;
 }
 
 #icon {
-    /* width: 50px; */
+  /* width: 50px; */
 }

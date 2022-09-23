@@ -5,7 +5,7 @@ const temp = document.getElementById("currTemp");
 
 async function getWeather() {
   const response = await fetch(
-    "https://api.openweathermap.org/data/2.5/weather?q=zushi&APPID=01e01cdc66fefd67a63b4c44e1d5d997&units=metric",
+    "https://api.openweathermap.org/data/2.5/weather?q=yokohama&APPID=01e01cdc66fefd67a63b4c44e1d5d997&units=metric",
     { mode: "cors" }
   );
   const data = await response.json();
@@ -66,7 +66,8 @@ function displayTime() {
   let secs = liveTime.getSeconds();
 
   const time = document.querySelector("#clock");
-  if (mins.length < 2) mins = "0" + mins;
+  if (mins < 10) mins = "0" + mins;
+  if (secs < 10) secs = "0" + secs;
     
   time.textContent = `${hour}:${mins}:${secs}`;
 }
