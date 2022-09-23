@@ -5,17 +5,19 @@ const temp = document.getElementById("currTemp");
 
 async function getWeather() {
   const response = await fetch(
-    "http://api.weatherunlocked.com/api/current/35.44,139.63?app_id=e67b84ce&app_key=ea45e3e9a46b7ea2b6ef65a8cb15cb88",
+    "https://api.openweathermap.org/data/2.5/weather?q=zushi&APPID=01e01cdc66fefd67a63b4c44e1d5d997&units=metric",
     { mode: "cors" }
   );
   const data = await response.json();
   console.log(data);
   // cityNameDisplay.textContent = data.name;
-  description.textContent = data.wx_desc;
-  temp.textContent = data.temp_c;
-  icon.src = `http://www.weatherunlocked.com/Images/icons/1/${data.wx_icon}`;
-
+  description.textContent = data.weather[0].description;
+  const tempC = data.main.temp
+  temp.textContent = Math.ceil(tempC)
+  icon.src = ` http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    console.log(tempC);
 }
+
 
 // ==========================
 
