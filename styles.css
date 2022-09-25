@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   color: whitesmoke;
-  min-width: 330px;
+  min-width: 270px;
   gap: 30px;
 }
 
@@ -105,12 +105,12 @@ header {
 
 .tempXL {
   font-size: 10rem;
+  margin-right: 10px;
 }
 
 #temp-unit {
   position: relative;
   top: -55px;
-  left: -7px;
 }
 
 .text {
@@ -119,6 +119,6 @@ header {
   text-shadow: 2px 3px 9px #787878;
 }
 
-#icon {
-  /* width: 50px; */
-}
+/* #icon {
+  width: 50px;
+} */
