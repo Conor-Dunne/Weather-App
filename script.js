@@ -5,21 +5,26 @@ const temp = document.getElementById("currTemp");
 let userInput = "London";
 
 async function getWeather() {
-  const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&APPID=01e01cdc66fefd67a63b4c44e1d5d997&units=metric`,
-    { mode: "cors" }
-  );
-  const data = await response.json();
-  console.log(data);
-  cityNameDisplay.textContent = data.name;
-  description.textContent = data.weather[0].description;
-  const tempC = data.main.temp;
-  temp.textContent = Math.ceil(tempC);
-  icon.src = ` http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-  console.log(tempC);
+  try {
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&APPID=01e01cdc66fefd67a63b4c44e1d5d997&units=metric`,
+      { mode: "cors" }
+    );
+
+    const data = await response.json();
+    console.log(data);
+    cityNameDisplay.textContent = data.name;
+    description.textContent = data.weather[0].description;
+    const tempC = data.main.temp;
+    temp.textContent = Math.ceil(tempC);
+    icon.src = ` http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    console.log(tempC);
+  } catch (err) {
+    alert("City not found");
+  }
 }
 
-function getUserInput () {
+function getUserInput() {
   const input = document.querySelector("#search");
   userInput = input.value;
   console.log(userInput);
