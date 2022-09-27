@@ -2,7 +2,9 @@ const cityNameDisplay = document.getElementById("city");
 const description = document.getElementById("desc");
 const icon = document.getElementById("icon");
 const temp = document.getElementById("currTemp");
-let userInput = "London";
+const input = document.querySelector("#search");
+
+let userInput = "Yokohama";
 
 async function getWeather() {
   try {
@@ -20,14 +22,15 @@ async function getWeather() {
     icon.src = ` http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     console.log(tempC);
   } catch (err) {
-    alert("City not found");
+    alert('Area not found. Please try again.');
+    userInput = "Yokohama";
+    getWeather();
+    input.value = "";
   }
 }
 
 function getUserInput() {
-  const input = document.querySelector("#search");
   userInput = input.value;
-  console.log(userInput);
   getWeather();
 }
 
@@ -65,9 +68,8 @@ const date = new Date();
 const today = date.getDay();
 const month = date.getMonth();
 
-displayDate.textContent = `${daylist[today]}, ${
-  monthList[month]
-} ${date.getDate()}`;
+displayDate.textContent = 
+`${daylist[today]}, ${monthList[month]} ${date.getDate()}`;
 
 function displayTime() {
   const liveTime = new Date();
