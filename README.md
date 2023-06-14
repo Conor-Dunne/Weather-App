@@ -2,9 +2,6 @@
 
 A simple weather app using https://openweathermap.org/api
 
-# Shopping cart
-
-A simple fake store React app.
 
 [Live Demo](https://conor-dunne.github.io/Weather-App/) :point_left:
 
